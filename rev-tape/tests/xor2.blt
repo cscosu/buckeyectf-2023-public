@@ -1,0 +1,107 @@
+PUSH =0x54
+DUP
+PUSH =0x82
+DUP
+POP
+NAND
+DUP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+NAND
+POP
+NAND
+DUP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+POP
+NAND
+PRINTH
+
+#(A(AB)')'
+
+# A
+# AB'
+# B
+# B
+
+# A
+# A
+# B
+# B
+# B
+# B
+
+
+#A
+#B
+#B
+#
+#B
+#A
+#A
+#
+
+
+#(A(AB)')'
+#(B(AB)')'
+
+
+
+#NAND

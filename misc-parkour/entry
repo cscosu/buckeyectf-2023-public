@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+unzip /data.zip -d /
+chown -R minecraft:minecraft /data
+rm /data.zip
+exec /start

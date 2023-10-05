@@ -1,0 +1,4 @@
+docker-compose.yml
+solve.sol
+vars.env
+**/node_modules/

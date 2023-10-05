@@ -1,0 +1,31 @@
+name: label
+permissions: write-all
+on:
+  pull_request_target:
+
+jobs:
+  label:
+    name: Label PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Label
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          title="${{ github.event.pull_request.title }}"
+
+          if [[ "${title,,}" =~ ^"update" ]]; then
+            gh issue edit ${{ github.event.number }} --add-label enhancement
+          fi
+
+          if [[ "${title,,}" =~ ^"question" ]]; then
+            gh issue edit ${{ github.event.number }} --add-label question
+          fi
+
+          if [[ "${title,,}" =~ ^"docs" ]]; then
+            gh issue edit ${{ github.event.number }} --add-label documentation
+          fi

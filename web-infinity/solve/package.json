@@ -1,0 +1,16 @@
+{
+  "name": "solve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node solve.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^4.7.2",
+    "ts-node": "^10.9.1"
+  }
+}

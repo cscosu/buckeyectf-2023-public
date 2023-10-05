@@ -1,0 +1,49 @@
+blt_8 v2.0
+
+Modern day architectures are too complicated. Compare, conditional moves, integer over/underflow, too many branch instructions, billions and billions of addresses.
+Word size is 1 byte.
+the "belt" is 32 words long
+
+
+Instruction:
+0000 0000
+Opcode, it's all opcode
+            
+
+PUSH =[value]
+    Moves belt one to the right and writes a word at the current $sp
+    Takes next piece byte of data
+POP
+    Moves stack to the left
+
+# Moves belt to the right and keeps the front the same
+DUP
+
+
+Each argument pops off the stack
+
+# Branch if zero
+BZ <offset> <cond>
+
+# Branch if not zero
+BNZ <offset> <cond>
+
+# Pushes result to stack
+ADD <src1> <src2>
+# Note, there is no integer underflow, e.g. 10-40 = 0
+SUB <src1> <src2>
+MULT <src1> <src2>
+DIV <src1> <src2>
+
+# Functionally complete
+NAND <src1> <src2>
+
+# Pops off the stack and prints value in ascii
+PRINT <src>
+# Pops off and prints as hex
+PRINTH <src>
+
+# Pushes ascii to stack
+GET
+# Pushes hex to stack
+GETH
