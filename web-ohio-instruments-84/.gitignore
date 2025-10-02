@@ -1,0 +1,5 @@
+__pycache__
+.direnv
+*.jpg
+node_modules
+bun.lockb
